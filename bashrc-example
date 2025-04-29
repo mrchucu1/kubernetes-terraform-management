@@ -1,0 +1,1 @@
+alias k="kubectl --kubeconfig=/home/ubuntu/Downloads/kubeconfig2.yml"

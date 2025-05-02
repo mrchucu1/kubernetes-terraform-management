@@ -32,7 +32,12 @@ resource "helm_release" "harbor" {
 
   set {
     name  = "externalURL"
-    value = "https://${var.domain}"
+    value = "https://harbor.blautech.diegonavarro.dev"
+  }
+
+  set {
+    name  = "expose.ingress.hosts.core"
+    value = "harbor.blautech.diegonavarro.dev"
   }
 
   set {

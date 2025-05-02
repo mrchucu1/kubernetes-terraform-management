@@ -1,7 +1,7 @@
 variable "domain" {
   description = "Base domain for ingress"
   type        = string
-  default     = "harbor.diegonavarro.local"
+  default     = "harbor.blautech.diegonavarro.dev"
 }
 
 variable "namespace" {
@@ -19,7 +19,7 @@ variable "storage_class" {
 variable "harbor_url" {
   description = "Harbor registry URL"
   type        = string
-  default     = "harbor.test.diegonavarro.local"
+  default     = "harbor.blautech.diegonavarro.dev"
 }
 
 variable "harbor_password" {
@@ -31,12 +31,17 @@ variable "harbor_password" {
 variable "image_name" {
   description = "Name for application image"
   type        = string
-  default     = "technical-app"
+  default     = "technical-app/app"
 }
 
 variable "image_tag" {
   description = "Tag for application image"
   type        = string
-  default     = "v1"
+  default     = "latest"
 }
 
+variable "robot_token" {
+  description = "Robot token"
+  type        = string
+  sensitive   = true
+}
